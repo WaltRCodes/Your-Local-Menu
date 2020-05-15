@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Call term="delis"/>
-      <ReviewCall />
+      <ReviewCall restuarant="prospect-san-francisco" />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
