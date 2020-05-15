@@ -14,11 +14,25 @@ export default class Call extends Component {
         this.callApi();
     }
     async callApi() {
-        try {
-            
-        } catch (e) {
-          console.log(e);
+        {/*https://medium.com/@chaoyue_zhao/how-to-make-axios-api-calls-with-yelp-fusion-inside-react-js-10755d8485c5*/}
+        
+        axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search`, {
+        headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
+        },
+        params: {
+            term: 'delis',
+            latitude: '37.786882',
+            longitude: '-122.399972',
         }
+        })
+        .then((res) => {
+        console.log(res);
+        })
+        .catch((err) => {
+        console.log ('error');
+        })
+        
       }
   
   render() {
