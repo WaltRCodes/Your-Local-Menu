@@ -22,12 +22,12 @@ export default class Call extends Component {
         },
         params: {
             term: 'delis',
-            latitude: '37.786882',
-            longitude: '-122.399972',
+            latitude: '40.730610',
+            longitude: '-73.935242',
         }
         })
         .then((res) => {
-        console.log(res);
+        console.log(res.data.businesses);
         })
         .catch((err) => {
         console.log ('error');
