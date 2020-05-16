@@ -37,29 +37,48 @@ reviewRender=()=>{
    
    
 }
+edit=(e)=>{
+
+}
     render(){
 
         return(
-<div>
-
+<div className="container">
+<h1>Reviews </h1>
+<div className="flexparent">
 {
 this.state.userids!=null &&
-this.state.userids.map(dt=>(
-           <div>
+
+
+this.state.userids.map((dt,i)=>(
+<div>
+           <div className="flexchild">
            <div className='thumbnaildiv'>
            <img id="displaypic" src={dt.user.image_url}/>
            <p>{dt.user.name}</p>
+           <div className="btn">
+           <button type="submit" id="Delete"$i onClick={this.edit}>Delete</button>
+           <button type="submit" id="Update"$i onClick={this.edit}>Update</button>
            </div>
-           Reviewed on <p>{dt.time_created}</p> 
-           <p>{dt.rating}</p>   
+           </div>
+          
+           <div className="forflex">
+            Reviewed on {dt.time_created}<br />
+           {dt.rating} Stars  
            <p>{dt.text}</p>
+           </div>
 
            </div>
+           <br />
+
+          </div>
                 ))
-
-                }
-
-
+}
+                
+<br />
+<br />
+</div>
+ 
     
 </div>
 

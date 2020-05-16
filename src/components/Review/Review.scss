@@ -1,11 +1,48 @@
+.container{
+ text-align: center;
+ position: absolute;
+ left: 400px;
+.flexparent{
+display: flex;
 
+justify-content: center;
+flex-direction: column;
+text-align: left;
+
+
+
+.flexchild{
+  border:3px solid hotpink;
+   width:600px;
 .thumbnaildiv{
 display: flex;
 flex-direction: row;
+
+ justify-content: left;
     #displaypic{
-        border-radius: 98%;
-        height: 60px;
-        width: 50px;
+      //  padding-right: 20px;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin:10px;
       
       }
+    .btn{
+padding-left:250px;
+padding-top: 10px;
+button{
+  margin-right: 10px;
+  padding:10px 10px;
+}
+    }
+    }
+      .forflex{
+        display: flex;
+
+justify-content: flex-start;
+flex-direction: column;
+      }
+
+}
+}
 }
