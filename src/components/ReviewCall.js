@@ -20,13 +20,13 @@ export default class Call extends Component {
 // }
 
     componentDidMount() {
-      console.log("Are u comin here")
+   
         {/* call the api on page load */}
         if(this.props.restuarant!=null)
         this.callApi();
     }
     async callApi() {
-      console.log("Are u comin here")
+ 
         {/*https://medium.com/@chaoyue_zhao/how-to-make-axios-api-calls-with-yelp-fusion-inside-react-js-10755d8485c5*/}
         
         axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/${this.props.restuarant}/reviews`, {

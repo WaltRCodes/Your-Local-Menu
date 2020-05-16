@@ -11,42 +11,40 @@ userids:null
         }
     }
     componentDidUpdate=()=>{
-         if(this.props.data.length>1)
-         {
-            var userid
-        console.log(this.props.data) 
-        this.props.data.map(dt=>(
-            //         dt.user.map(d=>(
-            //  <p> {d.name}</p>
-            //     ))
-           
-           userid= dt.user.name
-                ))
-                console.log(userid)
-                if(this.state.userids==null)
-                {
-                this.setState({userids:userid})
-                
-        // console.log(this.state.userids[0].name)
-                }
+        if(this.props.data.length>1)
+        {
+            this.reviewRender();
         }
-        
     }
 
     componentDidMount=()=>{
-        
-// if(this.props.data.length>1)
-console.log(this.props.data)
+        if(this.props.data.length>1)
+        {
+            this.reviewRender();
+        }
     }
-
+reviewRender=()=>{
+    
+       
+   console.log() 
+           
+           if(this.state.userids==null)
+           {
+           this.setState({userids:this.props.data})
+           
+   // console.log(this.state.userids[0].name)
+           }
+   
+   
+}
     render(){
 
         return(
 <div>
 
 {
-this.props.data.length>1 &&
-this.props.data.map(dt=>(
+this.state.userids!=null &&
+this.state.userids.map(dt=>(
            <div>
            <div className='thumbnaildiv'>
            <img id="displaypic" src={dt.user.image_url}/>
@@ -54,8 +52,8 @@ this.props.data.map(dt=>(
            </div>
            Reviewed on <p>{dt.time_created}</p> 
            <p>{dt.rating}</p>   
-           
-<p>{dt.text}</p>
+           <p>{dt.text}</p>
+
            </div>
                 ))
 
