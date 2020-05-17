@@ -8,21 +8,12 @@ export default class Call extends Component {
         super(props);
         this.state = {
           data: [{}],
-          flag:false
         }
   }
-// componentDidUpdate(){
-//   console.log("Are u comin here")
-//   if(this.props.restuarant!=null){
-// this.setState({flag:true})
-// this.callApi();
-//   }
-// }
 
     componentDidMount() {
    
         {/* call the api on page load */}
-        if(this.props.restuarant!=null)
         this.callApi();
     }
     async callApi() {
@@ -35,9 +26,9 @@ export default class Call extends Component {
         }
         })
         .then((res) => {
-          this.setState({flag:true})
+  
           this.setState({data:res.data.reviews})
-        console.log(res.data.reviews);
+        
         })
         .catch((err) => {
         console.log ('error');
@@ -49,7 +40,7 @@ export default class Call extends Component {
     
     return (
       <div>
-        {/* {this.state.flag==true && */}
+      
       <Review data={this.state.data} />
         
       </div>
