@@ -9,7 +9,9 @@ export default class Review extends Component{
         this.state={
 userids:null,
 hdnBtn:true,
-value:''
+value:'',
+txtid:0,
+id:-1
         }
     }
     componentDidUpdate=()=>{
@@ -41,11 +43,16 @@ reviewRender=()=>{
 }
 handletextChange=(e)=>{
     this.setState({value:e.target.value})
+    this.setState({txtid:e.target.id})
     console.log(this.state.value)
 }
 handleSubmit=(e)=>{
     e.preventDefault();
+    var temp=this.state.userids
+    temp[this.state.txtid].text=this.state.value;
+    this.setState({userids:temp})
     console.log(this.state.value)
+    this.setState({hdnBtn:true})
 }
 delete=(e)=>{
 console.log(e.target.id)
@@ -55,7 +62,9 @@ this.setState({userids:del})
 }
 edit=(e)=>{
     e.preventDefault();
+    this.setState({id:e.target.id})
     this.setState({hdnBtn:false})
+    
 }
     render(){
 
@@ -84,10 +93,10 @@ this.state.userids.map((dt,i)=>(
            <div className="forflex">
            Reviewed on {dt.time_created}<br />
            {dt.rating} Stars  
-           <textarea defaultValue={dt.text} onChange={this.handletextChange} disabled={this.state.hdnBtn} / >
+           <textarea id={i} defaultValue={dt.text} onChange={this.handletextChange} disabled={this.state.id==i ?false:true} / >
          
         </div>
-        <button type="submit" id="change" hidden={this.state.hdnBtn} onClick={this.handleSubmit}>Submit</button>
+       
            <br />
          
 
