@@ -39,10 +39,27 @@ export default class Call extends Component {
   }
 
   createComment(){
-      let newReviews = this.state.reviews;
-      let newReviewHTML = <ReviewCell user={this.state.name} rating={this.state.rating} comment={this.state.comment}/>;
-      newReviews.push(newReviewHTML);
-      this.setState({reviews:newReviews});
+    //   let newReviews = this.state.reviews;
+    //   let newReviewHTML = <ReviewCell user={this.state.name} rating={this.state.rating} comment={this.state.comment}/>;
+    //   newReviews.push(newReviewHTML);
+    //  this.setState({reviews:newReviews});
+    let currentReviews = this.state.data;
+    let newReview =  {
+        "id": "",
+        "url": "",
+        "text": this.state.comment,
+        "rating": parseInt(this.state.rating),
+        "time_created": new Date().toISOString().replace("T", " ").replace("Z", ""),
+        "user": {
+          "id": "",
+          "profile_url": "",
+          "image_url": "",
+          "name": this.state.name
+        }
+      };
+      currentReviews.unshift(newReview);
+      this.setState({data:currentReviews});
+
   }
 
     componentDidMount() {
