@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 export default class Call extends Component {
     constructor(props) {
@@ -13,10 +12,16 @@ export default class Call extends Component {
   
   render() {
     return (
-      <div>
-        
-        
-      </div>
+        this.state.isFillingOutForm ?
+        <div>
+            <form>
+
+            </form>
+        </div>
+      :
+        <div>
+            <button>Leave a review</button>
+        </div>
       
     )
   }
