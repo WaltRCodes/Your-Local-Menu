@@ -7,7 +7,9 @@ export default class Review extends Component{
         super(props)
 
         this.state={
-userids:null
+userids:null,
+hdnBtn:true,
+value:''
         }
     }
     componentDidUpdate=()=>{
@@ -38,10 +40,12 @@ reviewRender=()=>{
    
 }
 handletextChange=(e)=>{
-
+    this.setState({value:e.target.value})
+    console.log(this.state.value)
 }
 handleSubmit=(e)=>{
-
+    e.preventDefault();
+    console.log(this.state.value)
 }
 delete=(e)=>{
 console.log(e.target.id)
@@ -50,7 +54,8 @@ delete del[e.target.id]
 this.setState({userids:del})
 }
 edit=(e)=>{
-
+    e.preventDefault();
+    this.setState({hdnBtn:false})
 }
     render(){
 
@@ -69,22 +74,20 @@ this.state.userids.map((dt,i)=>(
            <img id="displaypic" src={dt.user.image_url}/>
            <p>{dt.user.name}</p>
            <div className="btn">
-           <button type="submit" id={i} onClick={this.delete}>Delete</button>
            <button type="submit" id={i} onClick={this.edit}>Update</button>
+           <button type="submit" id={i} onClick={this.delete}>Delete</button>
+           
            
            </div>
            </div>
-          
-          
-            
-           
+        
            <div className="forflex">
            Reviewed on {dt.time_created}<br />
            {dt.rating} Stars  
-           <textarea value={dt.text} onChange={this.handletextChange} disabled={true}  />
-           
+           <textarea defaultValue={dt.text} onChange={this.handletextChange} disabled={this.state.hdnBtn} / >
+         
         </div>
-        <button type="submit" id="change" hidden={true} onClick={this.handleSubmit}>Submit</button>
+        <button type="submit" id="change" hidden={this.state.hdnBtn} onClick={this.handleSubmit}>Submit</button>
            <br />
          
 
