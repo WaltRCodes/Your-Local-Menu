@@ -6,15 +6,21 @@ export default class Call extends Component {
         this.state = {
           isFillingOutForm: false
         }
+
+        this.handleClick = this.handleClick.bind(this);
   }
 
-    
+  handleClick() {
+    this.setState(prevState => ({
+        isFillingOutForm: !prevState.isFillingOutForm
+    }));
+  }
   
   render() {
     return (
         this.state.isFillingOutForm ?
         <div>
-            <form onSubmit={props.submitReview}>
+            <form onSubmit={this.handleClick}>
                 <label>
                     Name:
                     <input type="text" onChange={props.takeName} placeholder="Name"/>
@@ -37,7 +43,7 @@ export default class Call extends Component {
         </div>
       :
         <div>
-            <button>Leave a review</button>
+            <button onClick={this.handleClick}>Leave a review</button>
         </div>
       
     )
