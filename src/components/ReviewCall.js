@@ -1,12 +1,36 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import LeaveReview from './LeaveReview';
 export default class Call extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          data: [{}]
+          data: [{}],
+          name:'',
+          rating:0,
+          comment:'',
+          reviews:''
+
         }
+
+        this.takeName = this.takeName.bind(this);
+        this.takeRating = this.takeRating.bind(this);
+        this.takeComment = this.takeComment.bind(this);
+  }
+
+  takeName(event){
+    {/* update the ymbol in state */}
+    this.setState({name: event.target.value});
+  }
+
+  takeRating(event){
+    {/* update the ymbol in state */}
+    this.setState({rating: event.target.value});
+  }
+
+  takeComment(event){
+    {/* update the quantity in state */}
+    this.setState({comment: event.target.value});
   }
 
     componentDidMount() {
@@ -33,7 +57,7 @@ export default class Call extends Component {
   render() {
     return (
       <div>
-        
+        <LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} />
         
       </div>
       

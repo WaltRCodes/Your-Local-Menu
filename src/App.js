@@ -1,13 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Call from './components/Call'
-import ReviewCall from './components/ReviewCall'
+import Call from './components/Call';
+import ReviewCall from './components/ReviewCall';
 function App() {
   return (
     <div className="App">
       <Call term="delis"/>
       <ReviewCall restuarant="prospect-san-francisco" />
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

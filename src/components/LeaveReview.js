@@ -23,17 +23,17 @@ export default class Call extends Component {
             <form onSubmit={this.handleClick}>
                 <label>
                     Name:
-                    <input type="text" onChange={props.takeName} placeholder="Name"/>
+                    <input type="text" onChange={this.props.takeName} placeholder="Name"/>
                     <br />
                 </label>
                 <label>
                     Rating:
-                    <input type="number" onChange={props.takeRating} placeholder="0.0"/>
+                    <input type="number" onChange={this.props.takeRating} placeholder="0.0"/>
                     <br />
                 </label>
                 <label>
                     Comment:
-                    <input type="number" onChange={props.takeComment} placeholder="Comment"/>
+                    <input type="text" onChange={this.props.takeComment} placeholder="Comment"/>
                     <br />
                 </label>
                 <label>
