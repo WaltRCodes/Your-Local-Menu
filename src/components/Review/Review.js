@@ -37,6 +37,18 @@ reviewRender=()=>{
    
    
 }
+handletextChange=(e)=>{
+
+}
+handleSubmit=(e)=>{
+
+}
+delete=(e)=>{
+console.log(e.target.id)
+var del=this.state.userids
+delete del[e.target.id]
+this.setState({userids:del})
+}
 edit=(e)=>{
 
 }
@@ -57,16 +69,24 @@ this.state.userids.map((dt,i)=>(
            <img id="displaypic" src={dt.user.image_url}/>
            <p>{dt.user.name}</p>
            <div className="btn">
-           <button type="submit" id="Delete"$i onClick={this.edit}>Delete</button>
-           <button type="submit" id="Update"$i onClick={this.edit}>Update</button>
+           <button type="submit" id={i} onClick={this.delete}>Delete</button>
+           <button type="submit" id={i} onClick={this.edit}>Update</button>
+           
            </div>
            </div>
           
+          
+            
+           
            <div className="forflex">
-            Reviewed on {dt.time_created}<br />
+           Reviewed on {dt.time_created}<br />
            {dt.rating} Stars  
-           <p>{dt.text}</p>
-           </div>
+           <textarea value={dt.text} onChange={this.handletextChange} disabled={true}  />
+           
+        </div>
+        <button type="submit" id="change" hidden={true} onClick={this.handleSubmit}>Submit</button>
+           <br />
+         
 
            </div>
            <br />
@@ -78,8 +98,7 @@ this.state.userids.map((dt,i)=>(
 <br />
 <br />
 </div>
- 
-    
+
 </div>
 
         );

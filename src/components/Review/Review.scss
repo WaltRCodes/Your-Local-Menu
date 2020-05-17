@@ -12,7 +12,8 @@ text-align: left;
 
 
 .flexchild{
-  border:3px solid hotpink;
+  background-color: whitesmoke;
+  // border:3px solid hotpink;
    width:600px;
 .thumbnaildiv{
 display: flex;
@@ -28,11 +29,13 @@ flex-direction: row;
       
       }
     .btn{
-padding-left:250px;
+position:absolute;
+right:10px;
+
 padding-top: 10px;
 button{
   margin-right: 10px;
-  padding:10px 10px;
+  //  padding:10px 10px;
 }
     }
     }
@@ -41,6 +44,14 @@ button{
 
 justify-content: flex-start;
 flex-direction: column;
+textarea{
+  font-weight: bold;
+  font-style: italic;
+  font-family: sans-serif;
+  
+  
+
+}
       }
 
 }
