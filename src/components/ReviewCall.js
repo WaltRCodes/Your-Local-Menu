@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import LeaveReview from './LeaveReview';
+import ReviewCell from './ReviewCell';
 export default class Call extends Component {
     constructor(props) {
         super(props);
@@ -9,13 +10,14 @@ export default class Call extends Component {
           name:'',
           rating:0,
           comment:'',
-          reviews:''
+          reviews:['']
 
         }
 
         this.takeName = this.takeName.bind(this);
         this.takeRating = this.takeRating.bind(this);
         this.takeComment = this.takeComment.bind(this);
+        this.createComment = this.createComment.bind(this);
   }
 
   takeName(event){
@@ -31,6 +33,13 @@ export default class Call extends Component {
   takeComment(event){
     {/* update the quantity in state */}
     this.setState({comment: event.target.value});
+  }
+
+  createComment(){
+      let newReviews = this.state.reviews;
+      let newReviewHTML = <ReviewCell user={this.state.name} rating={this.state.rating} comment={this.state.comment}/>;
+      newReviews.push(newReviewHTML);
+      this.setState({reviews:newReviews});
   }
 
     componentDidMount() {
@@ -57,8 +66,8 @@ export default class Call extends Component {
   render() {
     return (
       <div>
-        <LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} />
-        
+        <LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} createComment={this.createComment} />
+        <div>{this.state.reviews}</div>
       </div>
       
     )

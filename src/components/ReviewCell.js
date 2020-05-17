@@ -9,16 +9,17 @@ export default class Call extends Component {
       
   render() {
     return (
-      <div>
+      <div style={{backgroundColor:"yellow"}}>
           <div>
               <button>Edit</button>
               <button>Delete</button>
           </div>
         <div>
             <img />
-            <span></span>
+            <span>{this.props.user}</span>
+            <span>{this.props.rating}</span>
         </div>
-        <p>Comment:</p>
+        <p>Comment:{this.props.comment}</p>
       </div>
       
     )

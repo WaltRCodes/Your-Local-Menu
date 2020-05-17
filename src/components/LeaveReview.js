@@ -8,9 +8,19 @@ export default class Call extends Component {
         }
 
         this.handleClick = this.handleClick.bind(this);
+        //put this:event.preventDefault(); in the new form submitting function
+        this.submitForm = this.submitForm.bind(this);
   }
 
   handleClick() {
+    this.setState(prevState => ({
+        isFillingOutForm: !prevState.isFillingOutForm
+    }));
+  }
+
+  submitForm(event){
+    event.preventDefault();
+    this.props.createComment(); 
     this.setState(prevState => ({
         isFillingOutForm: !prevState.isFillingOutForm
     }));
@@ -20,7 +30,7 @@ export default class Call extends Component {
     return (
         this.state.isFillingOutForm ?
         <div>
-            <form onSubmit={this.handleClick}>
+            <form onSubmit={this.submitForm}>
                 <label>
                     Name:
                     <input type="text" onChange={this.props.takeName} placeholder="Name"/>
