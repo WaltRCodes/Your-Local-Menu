@@ -1,8 +1,4 @@
-# API: http://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique 
-
-
-# Font: 
-* Playfair and Roboto
+# API: https://www.yelp.com/developers
 
 
 # Wireframes
