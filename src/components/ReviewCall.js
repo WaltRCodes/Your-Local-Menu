@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import LeaveReview from './LeaveReview';
+import ReviewCell from './ReviewCell';
 import Review from './Review/Review'
 
 
@@ -8,7 +10,57 @@ export default class Call extends Component {
         super(props);
         this.state = {
           data: [{}],
+          name:'',
+          rating:0,
+          comment:'',
+          reviews:['']
+
         }
+
+        this.takeName = this.takeName.bind(this);
+        this.takeRating = this.takeRating.bind(this);
+        this.takeComment = this.takeComment.bind(this);
+        this.createComment = this.createComment.bind(this);
+  }
+
+  takeName(event){
+    {/* update the ymbol in state */}
+    this.setState({name: event.target.value});
+  }
+
+  takeRating(event){
+    {/* update the ymbol in state */}
+    this.setState({rating: event.target.value});
+  }
+
+  takeComment(event){
+    {/* update the quantity in state */}
+    this.setState({comment: event.target.value});
+  }
+
+  createComment(){
+    //   let newReviews = this.state.reviews;
+    //   let newReviewHTML = <ReviewCell user={this.state.name} rating={this.state.rating} comment={this.state.comment}/>;
+    //   newReviews.push(newReviewHTML);
+    //  this.setState({reviews:newReviews});
+    let currentReviews = this.state.data;
+    let newReview =  {
+        "id": "",
+        "url": "",
+        "text": this.state.comment,
+        "rating": parseInt(this.state.rating),
+        "time_created": new Date().toISOString().replace("T", " ").replace("Z", ""),
+        "user": {
+          "id": "",
+          "profile_url": "",
+          "image_url": "",
+          "name": this.state.name
+        }
+      };
+      currentReviews.unshift(newReview);
+      this.setState({data:currentReviews});
+      // console.log(this.state.data)
+
   }
 
     componentDidMount() {
@@ -40,9 +92,11 @@ export default class Call extends Component {
     
     return (
       <div>
-      
+
+        <LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} createComment={this.createComment} />
+        <div>{this.state.reviews}</div>      
       <Review data={this.state.data} />
-        
+
       </div>
       
     )
