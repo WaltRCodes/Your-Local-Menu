@@ -36,6 +36,11 @@
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
+        span{
+          font-size: small;
+          font-style: italic;
+          font-family: sans-serif;
+        }
         textarea{
           font-weight: bold;
           font-style: italic;
