@@ -7,47 +7,41 @@ export default class Review extends Component{
         super(props)
 
         this.state={
-            reviewData:null,
-            value:'',
-            txtid:0,
+            reviewData:[],
             id:-1
         }
+
     }
-    componentDidUpdate=()=>{
-        if(this.props.data.length>1)
+    componentDidUpdate=(prevProps)=>{
+        if(this.props.data!=prevProps.data)
         {
             this.reviewRender();
         }
+        
     }
 
     componentDidMount=()=>{
+         
         if(this.props.data.length>1)
         {
             this.reviewRender();
         }
     }
     reviewRender=()=>{
-
-           if(this.state.reviewData==null)
-           {
-           this.setState({reviewData:this.props.data})
-            }
+        this.setState({reviewData:this.props.data})
+         
     }
     handletextChange=(e)=>{
-    this.setState({value:e.target.value})
-    this.setState({txtid:e.target.id})
-    console.log(this.state.value)
+    this.setState({id:e.target.id})
+    var temp=this.state.reviewData
+    temp[this.state.id].text=e.target.value;
+    this.setState({reviewData:temp})
     }
     handleSubmit=(e)=>{
     e.preventDefault();
-    var temp=this.state.reviewData
-    temp[this.state.txtid].text=this.state.value;
-    this.setState({reviewData:temp})
-    console.log(this.state.value)
     this.setState({id:-1})
     }
     delete=(e)=>{
-    console.log(e.target.id)
     var del=this.state.reviewData
     delete del[e.target.id]
     this.setState({reviewData:del})
@@ -78,9 +72,9 @@ export default class Review extends Component{
                 </div>
                 
                 <div className="forflex">
-                Reviewed on {dt.time_created}<br />
-                {dt.rating} Stars  
-                <textarea id={i} defaultValue={dt.text} onChange={this.handletextChange} disabled={this.state.id==i ?false:true} / >
+                <span>Reviewed on {dt.time_created}</span>
+                <span>{dt.rating} Stars</span>
+                <textarea id={i} value={dt.text} autofocus onChange={this.handletextChange} disabled={this.state.id==i ?false:true} / >
                 </div>
                 <button type="submit" id={i} onClick={this.handleSubmit} hidden={this.state.id==i ?false:true}>Submit</button>
                 <br />
