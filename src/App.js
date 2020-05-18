@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Call term="delis"/>
-      <ReviewCall restuarant="prospect-san-francisco" />
+      <ReviewCall restuarant="johns-deli-and-grocery-brooklyn" />
       
     </div>
   );

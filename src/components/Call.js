@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Restaurant from './Review/Restaurantdetail';
 
 export default class Call extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          data: [{}]
+          data: [{}],
+          img_clicked:{}
         }
   }
 
@@ -28,17 +30,25 @@ export default class Call extends Component {
         })
         .then((res) => {
         console.log(res.data.businesses);
+        var data=JSON.parse(res.data.businesses)
+        this.setState({data:data})
+        this.img_onclick(1)
         })
         .catch((err) => {
         console.log ('error');
         })
         
       }
+      img_onclick=(id)=>{
+        var data=this.state.data[id]
+        this.setState({img_clicked:data})
+      }
   
   render() {
     return (
       <div>
-        
+       
+       <Restaurant imgclicked={this.state.img_clicked} />
         
       </div>
       

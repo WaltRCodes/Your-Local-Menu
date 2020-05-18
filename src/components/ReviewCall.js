@@ -59,7 +59,6 @@ export default class Call extends Component {
       };
       currentReviews.unshift(newReview);
       this.setState({data:currentReviews});
-      // console.log(this.state.data)
 
   }
 

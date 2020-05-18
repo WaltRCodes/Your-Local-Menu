@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../styles/LeaveReview.css'
 export default class Call extends Component {
     constructor(props) {
         super(props);
@@ -29,7 +29,7 @@ export default class Call extends Component {
   render() {
     return (
         this.state.isFillingOutForm ?
-        <div>
+        <div className="row">
             <form onSubmit={this.submitForm}>
                 <label>
                     Name:
@@ -52,7 +52,7 @@ export default class Call extends Component {
             </form>
         </div>
       :
-        <div>
+        <div className="row">
             <button onClick={this.handleClick}>Leave a review</button>
         </div>
       
