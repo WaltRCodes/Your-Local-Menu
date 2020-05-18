@@ -1,3 +1,52 @@
+# API: http://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique 
+
+
+# Font: 
+* Playfair and Roboto
+
+
+# Wireframes
+
+![alt text](https://github.com/WaltRCodes/Your-Local-Menu/blob/thandi/src/assets/New%20York%20-%20Your%20Local%20Menu%20Wireframe/New%20York%20-%20Your%20Local%20Menu%20Wireframe.001.jpeg "Landing Page")
+
+![alt text](https://github.com/WaltRCodes/Your-Local-Menu/blob/thandi/src/assets/New%20York%20-%20Your%20Local%20Menu%20Wireframe/New%20York%20-%20Your%20Local%20Menu%20Wireframe.002.jpeg "Leave Review Pagee")
+
+![alt text](https://github.com/WaltRCodes/Your-Local-Menu/blob/thandi/src/assets/New%20York%20-%20Your%20Local%20Menu%20Wireframe/New%20York%20-%20Your%20Local%20Menu%20Wireframe.003.jpeg "Submit Review Page")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
