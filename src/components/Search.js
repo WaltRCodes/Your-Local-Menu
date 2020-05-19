@@ -25,9 +25,10 @@ Click=(e)=>{
       
      return(
       
-        
+     
         <div className="holder"> 
         {/* <hr/> */}
+        {this.state.renderReview==false &&
           <form onSubmit={this.submitHandler}>
               <div className="search-tag" htmlFor="search-input">
                   <input 
@@ -48,10 +49,11 @@ Click=(e)=>{
 {/* Button is used to submit the request */}
     <h1 className="caption"> Search for a restaurant that delivers in San Francisco</h1>
               </div>
-          </form>
+          </form>}
           <div>
-          {this.state.renderReview &&
+          {this.state.renderReview ==true &&
           <Call term="delis"/>}
+          {this.state.renderReview ==true &&
           <ReviewCall restuarant="prospect-san-francisco" />}
           </div>
         </div>
