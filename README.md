@@ -1,4 +1,4 @@
-# API: https://www.yelp.com/developers
+# API: https://api.yelp.com/v3/businesses/search
 
 
 # Wireframes

@@ -1,0 +1,54 @@
+.search-tag{
+    position: relative;
+}
+
+.holder{
+    margin: 36px auto;
+    width: 100%;
+    max-width: 800px;
+
+
+}
+
+.holder input {
+    width: 100%;
+    padding: 16px;
+    font-size: 36px;
+    font-style: bold;
+    font-family: "Roboto";
+    color: orangered;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style:none;
+    border-bottom-style: none;
+    outline: none;
+    text-align: center
+}
+
+.title{
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 60px;
+}
+
+.city{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: medium;
+}
+
+hr {
+    width: 75%
+}
+
+.button {
+    position: absolute;
+    top: 25px;
+    right: -30px;
+    border:none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 85px;
+    background-color: black;
+}
