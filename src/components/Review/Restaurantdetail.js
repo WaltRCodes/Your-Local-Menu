@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Review.scss'
 
 function Restaurant(props) {
-    
+    //Rendering Restaurant details in Review page
     return (
       <div className="Restaurant">
        <img src={props.imgclicked.image_url}/><br /><br />
