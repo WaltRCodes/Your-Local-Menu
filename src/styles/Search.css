@@ -29,19 +29,19 @@
 
 .title{
     text-align: center;
-    font-family: "Playfair Display";
+    font-family: "Canela Text";
     font-size: 60px;
 }
 
 .city{
     text-align: center;
-    font-family: "Roboto";
+    font-family: "Canela Text";
     font-size: medium;
 }
 
 .caption{
     text-align: center;
-    font-family: "Playfair Display";
+    font-family: "Canela Text";
     font-size: medium;
 }
 /* hr {
