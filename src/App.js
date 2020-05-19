@@ -2,13 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Call from './components/Call';
-import Search from './components/Search'
-import ReviewCall from './components/ReviewCall';
+import Home from './components/Review/Home'
+
 function App() {
   return (
     <div className="App">
       
-      <Search />
+      <Home />
       
       
     </div>
