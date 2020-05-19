@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import '../styles/Search.css'
+import Call from './Call'
 
 class Search extends Component {
         constructor (){
