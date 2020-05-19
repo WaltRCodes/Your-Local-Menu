@@ -6,22 +6,24 @@
     margin: 36px auto;
     width: 100%;
     max-width: 800px;
+    
 
 
 }
 
 .holder input {
-    width: 100%;
+    width: 75%;
     padding: 16px;
     font-size: 36px;
     font-style: bold;
     font-family: "Roboto";
     color: orangered;
-    border-top-style: none;
+    border-color: black;
+    /* border-top-style: none;
     border-right-style: none;
     border-left-style:none;
     border-bottom-style: none;
-    outline: none;
+    outline: none; */
     text-align: center
 }
 
@@ -37,9 +39,14 @@
     font-size: medium;
 }
 
-hr {
-    width: 75%
+.caption{
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: medium;
 }
+/* hr {
+    width: 75%
+} */
 
 .button {
     position: absolute;

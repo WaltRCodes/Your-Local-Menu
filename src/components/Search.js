@@ -42,7 +42,7 @@ class Search extends Component {
           
             
             <div className="holder"> 
-                  
+            {/* <hr/> */}
               <form onSubmit={this.submitHandler}>
                   <div className="search-tag" htmlFor="search-input">
                       <input 
@@ -61,11 +61,11 @@ class Search extends Component {
     }
                    
                       
-                      <hr/>
+                      {/* <hr/> */}
                       <button className="button" type="submit"> Submit</button>
     
     {/* Button is used to submit the request */}
-                    
+        <h1 className="caption"> Search for a restaurant that delivers in New York</h1>
                   </div>
               </form>
             </div>
