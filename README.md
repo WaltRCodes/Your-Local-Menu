@@ -1,7 +1,22 @@
-# API: https://api.yelp.com/v3/businesses/search
+# Your Local Menu!
+
+## Problem Statement:
+People are having a hard time finding restaurants that deliver food to them.
+
+## Solution:
+Web app that allows people to search for restaurants near them by showing pictures of the local ones around them.
+
+## Technical description:
+Call the Yelp api to get the results of what the user is looking for. Populate the web page with results from the api call that match what the user is looking for
+
+## Deployed App
+
+[Here is a link to the app](http://discreet-education.surge.sh "Our deployed app")
+
+## API: https://api.yelp.com/v3/businesses/search
 
 
-# Wireframes
+## Wireframes
 
 ![alt text](https://github.com/WaltRCodes/Your-Local-Menu/blob/thandi/src/assets/New%20York%20-%20Your%20Local%20Menu%20Wireframe/New%20York%20-%20Your%20Local%20Menu%20Wireframe.001.jpeg "Landing Page")
 
