@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Call extends Component {
     constructor(props) {
         super(props);
-        
+        {/* this outputs a cell to hold reviews but it is no longer used in the current version of the app*/}
   }
 
       
