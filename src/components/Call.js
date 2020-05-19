@@ -36,12 +36,31 @@ export default class Call extends Component {
       }
   
   render() {
-    return (
-      <div>
+
+    var {isLoaded, term } = this. state;
+    if (!isLoaded) {
+      return <div>LOADING...</div>;
+
+    }
+
+    else {
+      return (
+        <div className="Gallery">
+          <ul>
+            {term.map(term => (
+              <li key={term.id}>
+                Name: {term.name}
+              </li>
+            ))};
+          </ul>
+          
+          
+        </div>
         
-        
-      </div>
-      
-    )
+      )
+    }
   }
+
 }
+
+    
