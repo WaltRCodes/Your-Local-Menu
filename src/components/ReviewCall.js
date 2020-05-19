@@ -16,7 +16,7 @@ export default class Call extends Component {
           reviews:['']
 
         }
-
+        {/*this binds the functions*/}
         this.takeName = this.takeName.bind(this);
         this.takeRating = this.takeRating.bind(this);
         this.takeComment = this.takeComment.bind(this);
@@ -43,6 +43,7 @@ export default class Call extends Component {
     //   let newReviewHTML = <ReviewCell user={this.state.name} rating={this.state.rating} comment={this.state.comment}/>;
     //   newReviews.push(newReviewHTML);
     //  this.setState({reviews:newReviews});
+    {/*this puts the data from the data fields into data*/}
     let currentReviews = this.state.data;
     let newReview =  {
         "id": "",
@@ -70,7 +71,7 @@ export default class Call extends Component {
     async callApi() {
  
         {/*https://medium.com/@chaoyue_zhao/how-to-make-axios-api-calls-with-yelp-fusion-inside-react-js-10755d8485c5*/}
-        
+        {/*this calls the api and puts the response data into state*/}
         axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/${this.props.restuarant}/reviews`, {
         headers: {
             Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
