@@ -93,9 +93,9 @@ export default class Call extends Component {
     return (
       <div>
 
-        <LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} createComment={this.createComment} />
+        
         <div>{this.state.reviews}</div>      
-      <Review data={this.state.data} />
+      <Review data={this.state.data} reviewButton={<LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} createComment={this.createComment} />}/>
 
       </div>
       
