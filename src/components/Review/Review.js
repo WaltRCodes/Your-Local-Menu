@@ -13,6 +13,7 @@ export default class Review extends Component{
 
     }
     componentDidUpdate=(prevProps)=>{
+        console.log(this.reviewData)
         if(this.props.data!=prevProps.data)
         {
             this.reviewRender();
@@ -74,7 +75,7 @@ export default class Review extends Component{
                 <div className="forflex">
                 <span>Reviewed on {dt.time_created}</span>
                 <span>{dt.rating} Stars</span>
-                <textarea id={i} value={dt.text} autofocus onChange={this.handletextChange} disabled={this.state.id==i ?false:true} / >
+                <textarea id={i} value={dt.text} autoFocus onChange={this.handletextChange} disabled={this.state.id==i ?false:true} / >
                 </div>
                 <button type="submit" id={i} onClick={this.handleSubmit} hidden={this.state.id==i ?false:true}>Submit</button>
                 <br />
