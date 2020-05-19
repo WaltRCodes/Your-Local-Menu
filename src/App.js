@@ -1,11 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Search from './components/Search';
 import Call from './components/Call';
 import ReviewCall from './components/ReviewCall';
-
-
+import Search from './components/Search';
 function App() {
   return (
     <div className="App">
@@ -15,10 +13,9 @@ function App() {
       <Call term="delis"/>
       <ReviewCall restuarant="prospect-san-francisco" />
 
-      
-      
     </div>
   );
 }
 
 export default App;
+

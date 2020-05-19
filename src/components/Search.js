@@ -40,7 +40,7 @@ updateSearch(event){
                   <button className="button" type="submit"> Submit</button>
 
 {/* Button is used to submit the request */}
-    <h1 className="caption"> Search for a restaurant that delivers in New York</h1>
+    <h1 className="caption"> Search for a restaurant that delivers in San Francisco</h1>
               </div>
           </form>
         </div>
