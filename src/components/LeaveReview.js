@@ -53,7 +53,7 @@ export default class Call extends Component {
         </div>
       :
         <div className="row">
-            <button onClick={this.handleClick}>Leave a review</button>
+            <button className="button" onClick={this.handleClick}>Leave a review</button>
         </div>
       
     )
