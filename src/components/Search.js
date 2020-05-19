@@ -51,10 +51,10 @@ Click=(e)=>{
               </div>
           </form>}
           <div>
-          {this.state.renderReview ==true &&
-          <Call term="delis"/>}
-          {this.state.renderReview ==true &&
-          <ReviewCall restuarant="prospect-san-francisco" />}
+
+          {this.state.renderReview ?
+          <ReviewCall restuarant="prospect-san-francisco" />:<Call term="delis"/>}
+          
           </div>
         </div>
      )

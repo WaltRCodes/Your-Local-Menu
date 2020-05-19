@@ -62,6 +62,14 @@ export default class Review extends Component{
 
         return(
         <div className="container">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div>{this.props.reviewButton}</div>
         <h1>Reviews </h1>
         {/* mapping to render review details */}
         <div className="flexparent">
