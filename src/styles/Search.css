@@ -1,5 +1,7 @@
 .search-tag{
-    position: relative;
+    position: absolute;
+    top:100px;
+   
 }
 
 .holder{

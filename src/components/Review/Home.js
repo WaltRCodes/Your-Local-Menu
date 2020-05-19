@@ -1,14 +1,14 @@
 import React,{Component} from 'react';
 
 import {  BrowserRouter as Router, Route, Link ,Switch} from "react-router-dom";
-
+import './Review.scss'
 import Search from '../Search'
 import ReviewCall from '../ReviewCall'
 
 export default function Home(){
     
 return(
-     <div>
+     <div className="RouteC">
     <Router>
     <div className="Route">
     <Link to="/" > About</Link>
@@ -37,7 +37,7 @@ return(
 function About(){
 return(
 
-    <div>
+    <div className="About">
 working on it
     </div>
 )

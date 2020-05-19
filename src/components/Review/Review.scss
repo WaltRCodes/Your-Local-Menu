@@ -67,3 +67,39 @@
     width:300px;
   }
 }
+
+
+.About{
+
+  position: absolute;
+    top:10px;
+}
+.RouteC{
+  position: relative;
+   bottom:800px;
+.Route{
+  
+  display: flex;
+      flex-direction: row;
+justify-content: space-evenly;
+
+
+      
+//    list-style-type:none;
+//     margin: 0px;
+//     padding: 0px;
+//     position: absolute;
+//     top:400px;
+
+  link{
+     font-size: xx-large;
+      padding :10px 10px;
+      margin: 0px;
+      color: white;
+      background-color: white;
+      
+                  }
+
+
+}
+}
