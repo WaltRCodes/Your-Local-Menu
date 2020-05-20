@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import LeaveReview from './LeaveReview';
-import ReviewCell from './ReviewCell';
 import Review from './Review/Review'
 
 
@@ -94,8 +93,8 @@ export default class Call extends Component {
       <div>
 
         
-        <div>{this.state.reviews}</div>      
-      <Review data={this.state.data} reviewButton={<LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} createComment={this.createComment} />}/>
+           
+        <Review data={this.state.data} reviewButton={<LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} createComment={this.createComment} />}/>
 
       </div>
       

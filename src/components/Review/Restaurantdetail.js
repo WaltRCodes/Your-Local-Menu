@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Review.scss'
 
 function Restaurant(props) {
     //Rendering Restaurant details in Review page
     return (
-      <div className="Restaurant">
+      <div>
        <img src={props.imgclicked.image_url}/><br /><br />
        <span>{props.imgclicked.name}</span><br />
        <span>{props.imgclicked.phone}</span><br />
