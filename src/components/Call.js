@@ -6,15 +6,22 @@ export default class Call extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          data: [{}],
+          data: [''],
           img_clicked:{},
-          location:''
+          location:'',
+          resHTML:[<div>Please make a search</div>]
         }
   }
 
     componentDidMount() {
         {/* call the api on page load */}
-        this.callApi();
+          this.callApi();
+          //elements = this.state.data.map(resObj => <Restaurant imgclicked={resObj} location={resObj.location.display_address} />);
+          //console.log(this.state.data[1]);
+          // for(let resObj of this.state.data){
+          //   console.log(resObj);
+          // }
+        
     }
     async callApi() {
         {/*https://medium.com/@chaoyue_zhao/how-to-make-axios-api-calls-with-yelp-fusion-inside-react-js-10755d8485c5*/}
@@ -30,11 +37,16 @@ export default class Call extends Component {
         }
         })
         .then((res) => {
-        console.log(res.data.businesses);
-        
-        this.setState({data:res.data.businesses})
-        this.img_onclick(1)
-        console.log (this.state.data[0].location.display_address);
+        //console.log(res.data.businesses);
+        //let 
+        for(let resObj of res.data.businesses){
+          console.log(resObj.location.display_address);
+        }
+        let htmlArray = res.data.businesses.map(resObj => <Restaurant imgclicked={resObj} location={resObj.location.display_address} />);
+        this.setState({data:res.data.businesses,resHTML:htmlArray});
+        //this.setState({resHTML:elements});
+        //this.img_onclick(1);
+        //console.log(this.state.data[0].location.display_address);
         })
         .catch((err) => {
         console.log ('error');
@@ -49,9 +61,9 @@ export default class Call extends Component {
   
   render() {
     return (
-      <div>
-       
-       <Restaurant imgclicked={this.state.img_clicked} location={this.state.location} />
+      <div id="test">
+       {this.state.resHTML}
+       {/*<Restaurant imgclicked={this.state.img_clicked} location={this.state.location} />*/}
         
       </div>
       

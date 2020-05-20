@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Call from './components/Call';
 import Home from './components/Review/Home'
 import Bkg from './Bkg.jpg'
 import Modal from './components/Review/Modal/Modalparent'

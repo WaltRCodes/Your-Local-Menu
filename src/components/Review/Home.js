@@ -1,12 +1,26 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 
 import {  BrowserRouter as Router, Route, Link ,Switch} from "react-router-dom";
 import './Review.scss'
 import Search from '../Search'
 import ReviewCall from '../ReviewCall'
 
-export default function Home(){
-    
+
+  export default class Home extends Component   {
+
+    constructor(props) {
+      super(props);
+      this.state = {
+        resturatantDiv:<div></div>,
+        resturantName:''
+
+      }
+      {/*this binds the functions*/}
+      //this.takeDivandName = this.takeDivandName.bind(this);
+}
+
+
+    render() {
 return(
      <div className="RouteC">
     <Router>
@@ -33,7 +47,7 @@ return(
   </div>  
 )
 }
-
+  }
 function About(){
 return(
 
