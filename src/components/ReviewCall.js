@@ -64,7 +64,7 @@ export default class Call extends Component {
   }
 
     componentDidMount() {
-   
+   console.log("Are u comin here")
         {/* call the api on page load */}
         this.callApi();
     }
