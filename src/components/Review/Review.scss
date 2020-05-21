@@ -4,6 +4,7 @@
   position: fixed;
   left: 400px;
   top:10px;
+
   h1{
     color:Red;
     font-family: cursive;
@@ -15,6 +16,7 @@
     flex-direction: column;
     text-align: left;
     .flexchild{
+      border: 2px solid red;
       background-color: whitesmoke;
       // border:3px solid hotpink;
         width:600px;
@@ -38,7 +40,7 @@
           font-family: cursive;
           font-size: large;
           margin-right: 10px;
-          border:1px yellow bold;
+          background-color: yellowgreen;
           //  padding:10px 10px;
         }
       }
