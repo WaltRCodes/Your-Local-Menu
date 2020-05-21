@@ -107,6 +107,7 @@ render(){
         return(
         
             <div className="About">
+                <h1 id="yelp">Yelp</h1>
                 <img src={menu} />
                 <div id="header">
                 <h1> Yelp connects people with </h1>

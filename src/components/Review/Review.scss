@@ -4,6 +4,11 @@
   position: fixed;
   left: 400px;
   top:10px;
+  h1{
+    color:Red;
+    font-family: cursive;
+    font-size: xx-large;
+  }
   .flexparent{
     display: flex;
     justify-content: center;
@@ -29,7 +34,11 @@
           right:10px;
            padding-top: 10px;
         button{
+          color: red;
+          font-family: cursive;
+          font-size: large;
           margin-right: 10px;
+          border:1px yellow bold;
           //  padding:10px 10px;
         }
       }

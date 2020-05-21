@@ -46,15 +46,15 @@ makeSearch(event){
                   <button className="button" type="submit"> Submit</button>
 
                   {/* Button is used to submit the request */}
-                  <h1 className="caption"> Search for a restaurant that delivers in San Francisco</h1>
+                  
+                  <h1 className="caption">search for a restaurant that delivers Search for a in San Francisco</h1>
               </div>
           </form>{/* move this back later this.state.renderReview==false*/ }
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          {/* <br/>
+          
+          
+           */}
+           <br/>
           <br/>
           <br/>
           <div>
