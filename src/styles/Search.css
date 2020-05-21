@@ -5,17 +5,21 @@
 }
 
 .holder{
-    margin: 36px auto;
+    background-color: wheat;
+    /* margin: 36px auto; */
     width: 100%;
-    max-width: 800px;
+height:100%;
     
 
 
 }
 
 .holder input {
+    position: absolute;
+    left:70px;
     width: 75%;
-    padding: 16px;
+    top:20px;
+    padding: 0 180px;
     font-size: 36px;
     font-style: bold;
     font-family: "Roboto";
@@ -42,6 +46,8 @@
 }
 
 .caption{
+    /* position:absolute;
+    top:-10px; */
     text-align: center;
     font-family: "Canela Text";
     font-size: medium;
@@ -53,11 +59,12 @@
 .button {
     position: absolute;
     top: 25px;
-    right: -30px;
+    right: -420px;
     border:none;
     color: white;
     padding: 10px;
     border-radius: 8px;
     width: 85px;
-    background-color: black;
+    font-size: large;
+    background-color:  red;
 }

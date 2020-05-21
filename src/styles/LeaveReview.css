@@ -1,11 +1,23 @@
 .row{
+    top:75px;
+    position: absolute;
+    left:650px;
     display:flex;
     flex-direction: row-reverse;
     
 }
 .row>button{
-    width:50%;
+    /* width:70%; */
+    padding:0 80px;
+    font-size: large;
+    color: red;
+    font-family: cursive;
+    font-size:x-large;
 }
 .row>form{
     width:50%;
+    top:75px;
+    left:100px;
+    position: absolute;
 }
+
