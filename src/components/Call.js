@@ -61,7 +61,7 @@ export default class Call extends Component {
   
   render() {
     return (
-      <div id="test">
+      <div id="Gridcontainer">
        {this.state.resHTML}
        {/*<Restaurant imgclicked={this.state.img_clicked} location={this.state.location} />*/}
         

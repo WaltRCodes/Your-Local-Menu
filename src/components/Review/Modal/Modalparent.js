@@ -8,6 +8,8 @@ import ReviewCall from './../../ReviewCall'
 import { Redirect } from "react-router-dom";
 import hambtn from './Assets/menu-icon.png'
 import Bkg from './Assets/Bkg.jpg'
+import menu from './Assets/Menu.jpg'
+import chef from './Assets/chef.jpg'
 
 
 export default class Modal extends Component{
@@ -23,14 +25,24 @@ this.state={
    
 }}
 
-showModal = () => {
-    this.setState({ show: true });
-    this.setState({ clsName: "block" });
+showModal = (e) => {
+    e.preventDefault()
+    if(this.state.show==false){
+        this.setState({show:true});
+        this.setState({ clsName: "block" });
     this.setState({ expand: "modal-main" });
-  };
+   
+    
+    }
+    
+    else{
+    this.setState({show:false})
+    this.setState({clsName: "none"});}
+}
 
 hide=(e)=>{
-    
+    e.preventDefault()
+    console.log("hiding")
 this.setState({clsName: "none"});
 }
     handleexpand=(e)=>{
@@ -49,6 +61,7 @@ render(){
       <div className={this.state.expand} style={{display:this.state.clsName}}>
       {this.state.show==true && 
 <div >
+<img id="menu" src={menu} />
   <button id="close" onClick={this.hide} >X</button>
   <div className="links">
 <Router>
@@ -62,7 +75,7 @@ render(){
 { this.state.expand=="modal" &&
 <div>
 <div>
-<img src={Bkg} />
+{/* <img src={Bkg} /> */}
 </div>
 <div>
 <Router>
@@ -82,7 +95,7 @@ render(){
         
       
 <div>
-    <img id="hambtn" src={hambtn} onClick={this.showModal} alt="img not found"/>
+    <img id="hambtn" src={chef} onClick={this.showModal} alt="img not found"/>
       
       </div>
        
@@ -94,7 +107,12 @@ render(){
         return(
         
             <div className="About">
-        working on it
+                <img src={menu} />
+                <div id="header">
+                <h1> Yelp connects people with </h1>
+                <h1>great local businesses</h1>
+                </div>
+     
             </div>
         )
         }

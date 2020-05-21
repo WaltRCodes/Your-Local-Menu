@@ -113,3 +113,48 @@ justify-content: space-evenly;
   border-top-right-radius: 90%;
   border-bottom-right-radius: 90%;
 }
+#Gridcontainer{
+  display: grid;
+  grid-template-columns: auto auto auto  ;
+  /* // grid-row-gap: 2px;
+  // grid-column-gap: 2px; */
+  position: relative;
+  justify-items: center;
+  
+       top:100px;
+      /* //  left:50px; */
+       width:75%;
+       /* h4{
+
+          text-align: justify;     
+       } */
+      }
+
+  
+
+      #GridChild{
+          padding: 1px;
+          // background-color: #9ae1d3;
+          //border : 3px solid cornflowerblue;
+              height: 290px;
+              width:265px;
+              position: relative;
+              align-self: center;
+              text-align: center;
+              // top:130px;
+              // left:150px;
+          img{
+          
+              height:200px;
+              width:250px;
+              
+          }
+          img:hover{
+              transform: scale(1.5);
+      
+          }
+          }
+
+          
+
+      
