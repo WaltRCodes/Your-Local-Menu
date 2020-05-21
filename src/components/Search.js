@@ -15,7 +15,7 @@ class Search extends Component {
         this.makeSearch = this.makeSearch.bind(this);
         }
 updateSearch(event){
-    this.setState({search: event.target.value.substr(0,20)})
+    this.setState({search: event.target.value})
 }
 makeSearch(event){
   event.preventDefault();
@@ -39,7 +39,7 @@ makeSearch(event){
                   name= "name" 
                   id ="search-input"
                   placeholder = "search"
-                  onChange= {this.state.search}
+                  onChange= {this.updateSearch}
                   />
                   
                   {/* <hr/> */}
