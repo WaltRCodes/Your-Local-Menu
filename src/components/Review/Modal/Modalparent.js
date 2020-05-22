@@ -49,11 +49,13 @@ this.setState({clsName: "none"});
 }
     handleexpand=(e)=>{
         this.setState({show:false});  
-        this.setState({expand:"modal"});  
+        this.setState({expand:"modal"});
+        console.log(e);  
     }
     routeToCustomReview=(element,title)=>{
         //console.log(e);
         this.setState({sideElement:element,restuarant:title});
+        
     }
 
 
