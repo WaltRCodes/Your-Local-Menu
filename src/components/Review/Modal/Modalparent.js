@@ -6,7 +6,7 @@ import '../Review.scss'
 import Search from './../../Search'
 import ReviewCall from './../../ReviewCall'
 import menu from './Assets/Menu.jpg'
-import chef from './Assets/Chef.jpg'
+import chef from './Assets/chef.jpg'
 
 
 export default class Modal extends Component{

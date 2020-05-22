@@ -86,7 +86,7 @@ export default class Review extends Component{
                 <div className="forflex">
                 <span>Reviewed on {dt.time_created}</span>
                 <span>{dt.rating} Stars</span>
-                <textarea className='textarea' id={i} value={dt.text} onChange={this.handletextChange} disabled={false}/ >
+                <textarea className='textarea' id={i} value={dt.text} onChange={this.handletextChange} disabled={true}/ >
                 </div>
                 <button type="submit" id={i} onClick={this.handleSubmit} hidden={this.state.id===i ?false:true}>Submit</button>
                 <br />
