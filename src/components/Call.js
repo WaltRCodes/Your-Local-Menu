@@ -45,11 +45,11 @@ export default class Call extends Component {
         }
         console.log(this.props.capture);
         let htmlArray = res.data.businesses.map(resObj => 
-          <Router>
+          
             <Link to="/Reviews" onClick={() => this.props.capture(<Restaurant imgclicked={resObj} location={resObj.location.display_address} />,resObj.alias)} >
               <Restaurant imgclicked={resObj} location={resObj.location.display_address} />
             </Link>
-          </Router>
+          
         );
         this.setState({data:res.data.businesses,resHTML:htmlArray});
         //this.setState({resHTML:elements});
@@ -70,7 +70,9 @@ export default class Call extends Component {
   render() {
     return (
       <div id="Gridcontainer">
+        
        {this.state.resHTML}
+       
        {/*<Restaurant imgclicked={this.state.img_clicked} location={this.state.location} />*/}
         
       </div>
