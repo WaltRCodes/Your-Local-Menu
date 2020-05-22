@@ -93,7 +93,9 @@ export default class Call extends Component {
       <div>
 
         
-           
+        <div>
+          {this.props.sideElement}
+        </div>   
         <Review data={this.state.data} reviewButton={<LeaveReview takeName={this.takeName} takeRating={this.takeRating} takeComment={this.takeComment} createComment={this.createComment} />}/>
 
       </div>

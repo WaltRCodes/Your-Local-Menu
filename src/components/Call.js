@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Restaurant from './Review/Restaurantdetail';
+import {  BrowserRouter as Router, Route, Link,Switch } from "react-router-dom";
 
 export default class Call extends Component {
     constructor(props) {
@@ -40,9 +41,16 @@ export default class Call extends Component {
         //console.log(res.data.businesses);
         //let 
         for(let resObj of res.data.businesses){
-          console.log(resObj.location.display_address);
+          console.log(resObj);
         }
-        let htmlArray = res.data.businesses.map(resObj => <Restaurant imgclicked={resObj} location={resObj.location.display_address} />);
+        console.log(this.props.capture);
+        let htmlArray = res.data.businesses.map(resObj => 
+          <Router>
+            <Link to="/Reviews" onClick={() => this.props.capture(<Restaurant imgclicked={resObj} location={resObj.location.display_address} />,resObj.alias)} >
+              <Restaurant imgclicked={resObj} location={resObj.location.display_address} />
+            </Link>
+          </Router>
+        );
         this.setState({data:res.data.businesses,resHTML:htmlArray});
         //this.setState({resHTML:elements});
         //this.img_onclick(1);

@@ -20,6 +20,8 @@ this.state={
     clsName :"none",
     show:false,
     expand:'modal-main',
+    restuarant:'',
+    sideElement:<p>Please pick a restuarant from the search results</p>
   
     
    
@@ -48,6 +50,10 @@ this.setState({clsName: "none"});
     handleexpand=(e)=>{
         this.setState({show:false});  
         this.setState({expand:"modal"});  
+    }
+    routeToCustomReview=(element,title)=>{
+        //console.log(e);
+        this.setState({sideElement:element,restuarant:title});
     }
 
 
@@ -78,11 +84,11 @@ render(){
 {/* <img src={Bkg} /> */}
 </div>
 <div>
-<Router>
+<Router >
         <Switch >
         <Route exact path="/"><About/></Route>
-        <Route exact path="/Search"><Search /></Route>
-        <Route exact path="/Reviews"><ReviewCall restuarant="prospect-san-francisco" /></Route>
+        <Route exact path="/Search"><Search capture={this.routeToCustomReview}/></Route>
+        <Route exact path="/Reviews"><ReviewCall sideElement={this.state.sideElement} restuarant={this.state.restuarant} /></Route>
         </Switch>
         </Router>
         
