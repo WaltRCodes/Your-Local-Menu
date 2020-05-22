@@ -4,26 +4,14 @@
     left: 0;
     width:100%;
     height: 100%;
-    background-color: turquoise;
+    background-color: #CCF7FB ;
   }
   
   .modal-main {
-  
     margin:0px;
- 
     /* background-color: burlywood; */
     position: fixed;
-    /* height:700px;
-    width:22%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 80%; */
-    /* position:fixed;
-    background: whitesmoke;
-    width: 60%;
-    height: 100%;
-    top:0;
-    left:0;  */
-     /* transform: translate(-50%,-50%); */
+  
   }
   
   .display-block {
@@ -34,29 +22,27 @@
   .display-none {
     display: none;
   }
+#chefdiv{
+  position: absolute;
+  width: 210px;
+  height:210px;
 
-  #hambtn{
+  margin:0;
+    top: -35px;
+    left:-180px;
+}
+  #chef{
 
     position: absolute;
-    margin:0;
-    top: -20px;
-    left:-30px;
-    width: 200px;
-    height:200px;
     
-  }
-
-  #close{
-      font-size: xx-large;
-      position: absolute;
-    top:330px;
-    right:80px;
+    width: 30px;
+    height:280px;
     
   }
 
   .links{
-position: absolute;
-top:-250px;
+    position: absolute;
+    top:-250px;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -77,10 +63,7 @@ top:-250px;
     box-shadow: none;
     text-decoration: none;
     color:black;
-    margin:30px;
-   
-  
-        
+    margin:30px;       
 }
 .link:hover{
   color:red;
@@ -94,45 +77,6 @@ height:100%;
     
 }
 
-
-.hr{
-
-    width:25%;
-    margin: 10em 13em;
-}
-.hr hr {
-    display: block;
-    height: 1px;
-    border-top: 1px solid green ;
-  
-    padding: 0;
-    width:70%;
-
-}
-.hr p{
-
-    color:green;
-    text-align: justify ;
-}
-.list{
-    display:flex;
-    flex-direction: column;
-}
-  .list ul li p{
-    color:black;
-    text-align: justify ;
-    
-
-  }
-  .list{
-    position: absolute;
-    top:50px;
-    right:10em;
-    width:40%;
-    height:60%; 
-
-}
-
 #menu{
   margin:0px;
   top:-400px;
@@ -140,23 +84,8 @@ height:100%;
   position: absolute;
    left:-450px; 
    transition: 0.5s;
-  /* height:900px;
-  width:1020px; */
-  /* border-top-right-radius: 50%;
-  border-bottom-right-radius: 80%;
-   */
 
 }
- 
-@media screen and (max-height: 450px) {
-  #menu {overflow-y: auto;}
-  #menu  {
-    /* font-size: 40px; */
-    top: 15px;
-    right: 35px;
-    }
-  
-  }
 
   .About > img {
  

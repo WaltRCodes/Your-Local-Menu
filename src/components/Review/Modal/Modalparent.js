@@ -5,11 +5,8 @@ import {  BrowserRouter as Router, Route, Link,Switch } from "react-router-dom";
 import '../Review.scss'
 import Search from './../../Search'
 import ReviewCall from './../../ReviewCall'
-import { Redirect } from "react-router-dom";
-import hambtn from './Assets/menu-icon.png'
-import Bkg from './Assets/Bkg.jpg'
 import menu from './Assets/Menu.jpg'
-import chef from './Assets/chef.jpg'
+import chef from './Assets/Chef.jpg'
 
 
 export default class Modal extends Component{
@@ -42,11 +39,6 @@ showModal = (e) => {
     this.setState({clsName: "none"});}
 }
 
-hide=(e)=>{
-    e.preventDefault()
-    console.log("hiding")
-this.setState({clsName: "none"});
-}
     handleexpand=(e)=>{
         this.setState({show:false});  
         this.setState({expand:"modal"});
@@ -82,9 +74,7 @@ render(){
 </div>}
 { this.state.expand=="modal" &&
 <div>
-<div>
-{/* <img src={Bkg} /> */}
-</div>
+
 <div>
 <Router >
         <Switch >
@@ -102,8 +92,8 @@ render(){
         </div>
         
       
-<div>
-    <img id="hambtn" src={chef} onClick={this.showModal} alt="img not found"/>
+<div id="chefdiv">
+    <img id="chef" src={chef} onClick={this.showModal} alt="img not found"/>
       
       </div>
        

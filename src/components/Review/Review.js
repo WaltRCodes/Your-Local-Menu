@@ -53,8 +53,11 @@ export default class Review extends Component{
     }
     // once update button is clicked target id is saved to enable editing text area
     edit=(e)=>{
-        e.preventDefault();
+       e.preventDefault();
+        console.log("Are u enabling")
         this.setState({id:e.target.id})
+        document.getElementsByClassName('textarea')[e.target.id].style.disabled="false"
+        console.log(e.target.id)
     
     }
     render(){
@@ -83,7 +86,7 @@ export default class Review extends Component{
                 <div className="forflex">
                 <span>Reviewed on {dt.time_created}</span>
                 <span>{dt.rating} Stars</span>
-                <textarea id={i} value={dt.text} autoFocus onChange={this.handletextChange} disabled={this.state.id===i ?false:true} / >
+                <textarea className='textarea' id={i} value={dt.text} onChange={this.handletextChange} disabled={false}/ >
                 </div>
                 <button type="submit" id={i} onClick={this.handleSubmit} hidden={this.state.id===i ?false:true}>Submit</button>
                 <br />
