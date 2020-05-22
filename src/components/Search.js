@@ -20,7 +20,7 @@ updateSearch(event){
 makeSearch(event){
   event.preventDefault();
   console.log("This works");
-  this.setState({renderReview:true,submitSearch:<Call term={this.state.search}/>});
+  this.setState({renderReview:true,submitSearch:<Call capture={this.props.capture} term={this.state.search}/>});
 }
 
    render (){
