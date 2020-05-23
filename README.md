@@ -11,7 +11,7 @@ Call the Yelp api to get the results of what the user is looking for. Populate t
 
 ## Deployed App
 
-[Here is a link to the app](http://yourlocalmenu.surge.sh"Our deployed app")
+[Here is a link to the app](http://yourlocalmenu.surge.sh "Our deployed app")
 
 ## API: https://api.yelp.com/v3/businesses/search
 
