@@ -3,7 +3,7 @@
   text-align: center;
   position: fixed;
   left: 400px;
-  top:10px;
+  top:300px;
 
   h1{
     color:Red;
@@ -108,54 +108,18 @@
 }
 
 
-#Gridcontainer{
-  display: grid;
-  grid-template-columns: auto auto auto  ;
-  position: relative;
-  justify-items: center;
+
   
-       top:100px;
-        left:130px; 
-       width:80%;
-       /* h4{
-
-          text-align: justify;     
-       } */
-      
-      #GridChild{
-          padding: 1px;
-          color: red;
-          // background-color: #9ae1d3;
-          //border : 3px solid cornflowerblue;
-              height: 290px;
-              width:265px;
-              position: relative;
-              align-self: center;
-              text-align: center;
-              // top:130px;
-              // left:150px;
-          img{
-          
-              height:200px;
-              width:250px;
-              
-          }
-          img:hover{
-              transform: scale(1.2);
-      
-          }
-          }
-        }
-
+    
         #GridChild{
-        margin: 220px 50px;
-          color: red;
         
-              height: 290px;
-              width:265px;
+        margin:0px;
+          color: red;
+  
               position: relative;
               align-self: center;
               text-align: center;
+
               // top:130px;
               // left:150px;
           img{
