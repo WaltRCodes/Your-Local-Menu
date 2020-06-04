@@ -62,7 +62,7 @@ render(){
       {this.state.show==true && 
 <div >
 <img id="menu" src={menu} />
-  <button id="close" onClick={this.hide} >X</button>
+  {/* <button id="close" onClick={this.hide} >X</button> */}
   <div className="links">
 <Router>
         <Link to="/" className="link" onClick={this.handleexpand}>Home</Link>
