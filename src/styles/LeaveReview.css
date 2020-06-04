@@ -21,3 +21,37 @@
     position: absolute;
 }
 
+
+
+#Gridcontainer{
+    display: grid;
+    grid-template-columns: auto auto auto  ;
+    position: relative;
+    justify-items: center;
+    overflow: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  
+         width:100%;
+}
+     #Gridcontainer  #GridChild{
+            border:20px solid white;
+            border-bottom:30px solid white;
+           box-sizing: border-box;
+            box-shadow: 0px 4px 7px #777;
+          
+            color: red;
+                align-self: center;
+                text-align: center;
+                /* // top:130px;
+                // left:150px; */
+         }
+            #GridChild img{
+            
+                height:200px;
+                width:250px;
+                /* img:hover{
+                    transform: scale(1.2); */
+            
+                }
+            
